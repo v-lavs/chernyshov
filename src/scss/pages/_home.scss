@@ -49,3 +49,30 @@
     border-bottom: 1px dashed $bg-light-500;
   }
 }
+
+.dynamic-content{
+  p{
+    margin-bottom: 1.250em;
+  }
+  ul{
+    padding-left: 1.375em;
+  }
+  li{
+    position: relative;
+    margin-bottom: 0.938em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 17px;
+      height: 1px;
+      background-color: $color-dark;
+      left: -1.375em;
+      top: .65em;
+      z-index: 1;
+    }
+  }
+}

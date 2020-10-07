@@ -45,27 +45,29 @@
       height: 33px;
     }
   }
+
   &__nav {
     display: flex;
-    a{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    a {
+      display: inline-block;
       width: 20px;
       height: 20px;
       margin-left: 12px;
-      &:first-child{
+
+      &:first-child {
         left: 0;
       }
-      }
+    }
+
     .cls-1 {
       fill: #000000;
     }
   }
-  .social-icon{
+
+  .social-icon {
     width: 100%;
-  }
-  .social-icon_fb{
-    width: 50%;
+    height: 100%;
+    vertical-align: middle;
   }
 }

@@ -10,6 +10,13 @@
   .services {
     color: $color-primary;
   }
+  .sidebar-appointed-at{
+    padding: 0 35px;
+    line-height: 1.2;
+    .heading{
+      margin-bottom: 1.5em;
+    }
+  }
 }
 
 .swiper-button-next,
