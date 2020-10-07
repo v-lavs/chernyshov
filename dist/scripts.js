@@ -20093,10 +20093,31 @@ return jQuery;
 //# sourceMappingURL=swiper-bundle.min.js.map
 
 $(document).ready(function () {
-    var swiper = new Swiper('.swiper-container', {
+
+    //SLIDER
+    let swiper = new Swiper('.swiper-container', {
         navigation: {
             nextEl: '.swiper-slide__heading .swiper-button-next',
             prevEl: '.swiper-slide__heading .swiper-button-prev',
         },
     });
+
+
+     // TOP PLACEHOLDER
+
+    // $('.custom-input').on('input', function () {
+    //     let $this = $(this);
+    //     if ($this.val() === '') {
+    //         $this.removeClass('custom-input-filled');
+    //     } else {
+    //         $this.addClass('custom-input-filled');
+    //     }
+    // });
+    $('input').change(function() {
+        if ($(this).val())
+            $(this).addClass('has_value');
+        else
+            $(this).removeClass('has_value');
+    });
 });
+

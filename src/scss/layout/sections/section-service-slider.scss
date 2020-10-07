@@ -6,16 +6,20 @@
     right: 0;
     padding-top: 105px;
   }
-.section__content{
-  padding-right: 2.75em;
-}
+
+  .section__content {
+    padding-right: 2.75em;
+  }
+
   .services {
     color: $color-primary;
   }
-  .sidebar-appointed-at{
+
+  .sidebar-appointed-at {
     padding: 0 2.333em;
     line-height: 1.2;
-    .heading{
+
+    .heading {
       margin-bottom: 1.5em;
     }
   }
@@ -30,6 +34,11 @@
   border-radius: 50%;
   top: auto;
   bottom: 0;
+  &:hover,
+  &:focus{
+    border-color: $color-primary;
+    color: $color-primary;
+  }
 }
 
 .swiper-button-next {

@@ -131,20 +131,21 @@
                     со следующими проблемами:
                 </p>
                 <div class="row">
-                    <div class="col col-8">
-                        <ul>
-                            <li>
-                                — Неврологические проявления остеохондроза позвоночника при наличии протрузий и грыж
-                                межпозвонковых дисков
-                            </li>
-                            <li>
-                                — Заболевания и последствия травм опорно-
-                                двигательного аппарата
-                            </li>
-                            <li>
-                                — Нарушения осанки
-                            </li>
-                        </ul>
+                    <div class="col col-4 text_md">
+
+                        <p>
+                            Неврологические проявления остеохондроза позвоночника при наличии протрузий и грыж
+                            межпозвонковых дисков
+                        </p>
+                    </div>
+                    <div class="col col-4 text_md">
+                        <p>
+                            Заболевания и последствия травм опорно-
+                            двигательного аппарата
+                        </p>
+                        <p>
+                            Нарушения осанки
+                        </p>
                     </div>
                     <div class="col col-4">
                         <div class="certificate">
@@ -207,15 +208,16 @@
                         <article class="section swiper-slide">
                             <div class="swiper-slide__heading">
                                 <!-- Add Arrows -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                            <header class="section__header">
-                                <div class="swiper-slide__heading">
-                                    <!-- Add Arrows -->
+                                <div class="block-nav block-nav_next">
+                                    <div class="block-nav__name">Мануальная терапия</div>
                                     <div class="swiper-button-next"></div>
+                                </div>
+                                <div class="block-nav block-nav_prev">
+                                    <div class="block-nav__name">Обучение</div>
                                     <div class="swiper-button-prev"></div>
                                 </div>
+                            </div>
+                            <header class="section__header">
                                 <div class="services text_lg">Услуги</div>
 
                                 <h2 class="heading heading_xl section__title">Мануальная терапия</h2>
@@ -260,18 +262,17 @@
                                 </div>
                                 <aside class="col col-4 sidebar-appointed-at">
                                     <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
-
-                                        <ul>
-                                            <li> сердечно-сосудистой системы;</li>
-                                            <li> сердечной недостаточности, гипертонии/гипотонии,</li>
-                                            <li> при реабилитации после инфаркта миокарда;</li>
-                                            <li> опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
-                                            <li> дыхательных органов (бронхиальной астмы, хроническом бронхите,
-                                                пневмонии);
-                                            </li>
-                                            <li> радикулите;</li>
-                                            <li> невралгии;</li>
-                                        </ul>
+                                    <ul>
+                                        <li> сердечно-сосудистой системы;</li>
+                                        <li> сердечной недостаточности, гипертонии/гипотонии,</li>
+                                        <li> при реабилитации после инфаркта миокарда;</li>
+                                        <li> опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
+                                        <li> дыхательных органов (бронхиальной астмы, хроническом бронхите,
+                                            пневмонии);
+                                        </li>
+                                        <li> радикулите;</li>
+                                        <li> невралгии;</li>
+                                    </ul>
 
                                 </aside>
                             </div>
@@ -658,6 +659,73 @@
                 </div>
             </div>
         </footer>
+        <!--Modal-->
+        <div class="modal" id="appointment" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title heading_xl">Запись на приём</h3>
+                    </div>
+
+                    <div class="modal__body">
+                        <form action="" class="form">
+                            <div class="part-left">
+                                <div class="form__row">
+                                    <input id="name" type="text" class="input">
+                                    <label for="name" class="label-input">
+                                        <span>Имя и фамилия</span>
+                                    </label>
+                                </div>
+                                <div class="form__row">
+                                    <input id="phone" type="text" class="input">
+                                    <label for="phone" class="label-input">
+                                        <span>Номер телефона</span>
+                                    </label>
+
+                                </div>
+                                <div class="form__row">
+                                    <input id="date" type="text" class="input">
+                                    <label for="date" class="label-input">
+                                        <span>Дата</span>
+                                    </label>
+
+                                </div>
+
+                                <div class="form__row">
+                                    <input id="time" type="text" class="input">
+                                    <label for="time" class="label-input">
+                                        <span>Время</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="part-right">
+                                <div class="form__row">
+                                    <label for="description" class="label-textarea">Комментарий</label>
+                                    <textarea class="description" name="description" id="description" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="form__footer text_sm">
+                                <div class="personal-policy">
+                                    <p>
+                                        Нажимая на кнопку «Записаться», я даю свое согласие с
+                                        <a href="#" class="link link_modal">
+                                            политикой обработки персональных данных
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="btn-block">
+                                    <a class="link link_border-grey">Закрыть</a>
+                                    <button type="submit" class="btn btn_primary">Записаться</button>
+                                </div>
+                            </div>
+                        </form>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="overlay-modal"></div>
     </div>
 </div>
 </body>
