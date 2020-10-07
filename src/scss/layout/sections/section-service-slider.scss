@@ -6,12 +6,14 @@
     right: 0;
     padding-top: 105px;
   }
-
+.section__content{
+  padding-right: 2.75em;
+}
   .services {
     color: $color-primary;
   }
   .sidebar-appointed-at{
-    padding: 0 35px;
+    padding: 0 2.333em;
     line-height: 1.2;
     .heading{
       margin-bottom: 1.5em;
@@ -31,13 +33,13 @@
 }
 
 .swiper-button-next {
-  //right: -26px;
-  //transform: translateX(100%);
+
+  transform: translateX(-100%);
 }
 
 .swiper-button-prev {
-  //left: -26px;
-  //transform: translateX(-100%);
+
+  transform: translateX(100%);
 }
 
 .swiper-button-next::after,
