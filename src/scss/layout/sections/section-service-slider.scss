@@ -1,0 +1,39 @@
+.section-service-slider {
+  .swiper-slide__heading {
+    position: fixed;
+    background-color: transparent;
+    left: 0;
+    right: 0;
+    padding-top: 105px;
+  }
+
+  .services {
+    color: $color-primary;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  color: $color-dark;
+  border: 1px solid $color-dark;
+  border-radius: 50%;
+  top: auto;
+  bottom: 0;
+}
+
+.swiper-button-next {
+  //right: -26px;
+  //transform: translateX(100%);
+}
+
+.swiper-button-prev {
+  //left: -26px;
+  //transform: translateX(-100%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 23px;
+}

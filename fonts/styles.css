@@ -1,0 +1,25 @@
+
+@font-face {
+  font-family: 'GillSansC';
+  src: url('GillSansC.eot?#iefix') format('embedded-opentype'),  url('GillSansC.otf')  format('opentype'),
+	     url('GillSansC.woff') format('woff'), url('GillSansC.ttf')  format('truetype'), url('GillSansC.svg#GillSansC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'GillSansC';
+    src: url('GillSansC-Bold.eot?#iefix') format('embedded-opentype'),  url('GillSansC-Bold.otf')  format('opentype'),
+    url('GillSansC-Bold.woff') format('woff'), url('GillSansC-Bold.ttf')  format('truetype'), url('GillSansC-Bold.svg#GillSansC-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GillSansC';
+    src: url('GillSansExtraBoldC.eot?#iefix') format('embedded-opentype'),  url('GillSansExtraBoldC.otf')  format('opentype'),
+    url('GillSansExtraBoldC.woff') format('woff'), url('GillSansExtraBoldC.ttf')  format('truetype'), url('GillSansExtraBoldC.svg#GillSansExtraBoldC') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+

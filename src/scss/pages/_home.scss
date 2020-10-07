@@ -1,0 +1,51 @@
+.person-info {
+  min-height: 100px;
+  padding-top: 25px;
+  margin-bottom: 90px;
+
+  &__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__name {
+    padding-bottom: 15px;
+    line-height: 1;
+  }
+
+  &__position {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.66;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    max-width: 220px;
+  }
+}
+
+.link {
+  display: inline-block;
+  line-height: 1.25;
+  transition: .35s;
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+  }
+
+  &_primary {
+    position: relative;
+    color: $color-primary;
+    border-bottom: 1px dashed $color-primary;
+  }
+
+  &_border-grey {
+    line-height: 1.2;
+    border-bottom: 1px dashed $bg-light-500;
+  }
+}

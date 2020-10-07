@@ -1,0 +1,16 @@
+.header {
+  display: none;
+  &_fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  .btn-burger {
+    display: block;
+    margin-left: auto;
+    width: 30px;
+    cursor: pointer;
+  }
+}
