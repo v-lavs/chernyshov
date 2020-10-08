@@ -15,17 +15,24 @@ $(document).ready(function () {
         },
     });
 
+     // POPUP
+    $(".popup-trigger").click(function (e) {
+        e.preventDefault();
+
+        $("#popup-wrapper").addClass("active_popup");
+
+    });
+
+    $("#popup-wrapper, #close-popup").click(function (e) {
+        $("#popup-wrapper").removeClass("active_popup");
+
+    });
+
+    $(".modal").click(function (e) {
+        e.stopPropagation();
+    });
 
      // TOP PLACEHOLDER
-
-    // $('.custom-input').on('input', function () {
-    //     let $this = $(this);
-    //     if ($this.val() === '') {
-    //         $this.removeClass('custom-input-filled');
-    //     } else {
-    //         $this.addClass('custom-input-filled');
-    //     }
-    // });
     $('input').change(function() {
         if ($(this).val())
             $(this).addClass('has_value');

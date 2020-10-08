@@ -50,7 +50,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="link link_primary">Записаться на приём</a>
+                <a href="#" class="link link_primary popup-trigger">Записаться на приём</a>
             </div>
         </div>
 
@@ -148,17 +148,21 @@
                         </p>
                     </div>
                     <div class="col col-4">
-                        <div class="certificate">
-                            <a href="#" class="link link_primary">
-                                <img src="assets/img/icons/certificate.svg" alt="" class="img">
-                                Сертификат вот про что-то вот это
-                            </a>
-                            <a href="" class="link link_primary">
-                                <img src="assets/img/icons/certificate.svg" alt="" class="img">
-                                Сертификат вот про что-то вот это
-                            </a>
+                        <ul class="certificate">
+                            <li class="certificate__item">
+                                <a href="#" class="link link_primary">
+                                    <img src="assets/img/icons/certificate.svg" alt="" class="img">
+                                    Сертификат вот про что-то вот это
+                                </a>
+                            </li>
+                            <li class="certificate__item">
+                                <a href="" class="link link_primary">
+                                    <img src="assets/img/icons/certificate.svg" alt="" class="img">
+                                    Сертификат вот про что-то вот это
+                                </a>
+                            </li>
 
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -185,7 +189,7 @@
                     <div class="col col-6">
                         <header class="section__header">
                             <h2 class="heading heading_xl section__title">Когда нужна мануальная терапия</h2>
-                            <button class="btn btn_primary">Записаться на приём</button>
+                            <button class="btn btn_primary popup-trigger">Записаться на приём</button>
                         </header>
                     </div>
 
@@ -655,77 +659,78 @@
                             </svg>
                         </a>
                     </nav>
-                    <div><a class="link link_primary" href="#">Записаться на приём</a></div>
+                    <div><a class="link link_primary popup-trigger" href="#">Записаться на приём</a></div>
                 </div>
             </div>
         </footer>
         <!--Modal-->
-        <div class="modal" id="appointment" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal__content">
-                    <div class="modal__header">
-                        <h3 class="modal__title heading_xl">Запись на приём</h3>
+        <div class="overlay-modal" id="popup-wrapper">
+            <div class="modal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal__content">
+                        <div class="modal__header">
+                            <h3 class="modal__title heading_xl">Запись на приём</h3>
+                        </div>
+
+                        <div class="modal__body">
+                            <form action="" class="form">
+                                <div class="part-left">
+                                    <div class="form__row">
+                                        <input id="name" type="text" class="input">
+                                        <label for="name" class="label-input">
+                                            <span>Имя и фамилия</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__row">
+                                        <input id="phone" type="text" class="input">
+                                        <label for="phone" class="label-input">
+                                            <span>Номер телефона</span>
+                                        </label>
+
+                                    </div>
+                                    <div class="form__row">
+                                        <input id="date" type="text" class="input">
+                                        <label for="date" class="label-input">
+                                            <span>Дата</span>
+                                        </label>
+
+                                    </div>
+
+                                    <div class="form__row">
+                                        <input id="time" type="text" class="input">
+                                        <label for="time" class="label-input">
+                                            <span>Время</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="part-right">
+                                    <div class="form__row">
+                                        <label for="description" class="label-textarea">Комментарий</label>
+                                        <textarea class="description" name="description" id="description" cols="30"
+                                                  rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__footer text_sm">
+                                    <div class="personal-policy">
+                                        <p>
+                                            Нажимая на кнопку «Записаться», я даю свое согласие с
+                                            <a href="#" class="link link_modal">
+                                                политикой обработки персональных данных
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <a id="close-popup" class="link link_border-grey">Закрыть</a>
+                                        <button type="submit" class="btn btn_primary">Записаться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
-
-                    <div class="modal__body">
-                        <form action="" class="form">
-                            <div class="part-left">
-                                <div class="form__row">
-                                    <input id="name" type="text" class="input">
-                                    <label for="name" class="label-input">
-                                        <span>Имя и фамилия</span>
-                                    </label>
-                                </div>
-                                <div class="form__row">
-                                    <input id="phone" type="text" class="input">
-                                    <label for="phone" class="label-input">
-                                        <span>Номер телефона</span>
-                                    </label>
-
-                                </div>
-                                <div class="form__row">
-                                    <input id="date" type="text" class="input">
-                                    <label for="date" class="label-input">
-                                        <span>Дата</span>
-                                    </label>
-
-                                </div>
-
-                                <div class="form__row">
-                                    <input id="time" type="text" class="input">
-                                    <label for="time" class="label-input">
-                                        <span>Время</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="part-right">
-                                <div class="form__row">
-                                    <label for="description" class="label-textarea">Комментарий</label>
-                                    <textarea class="description" name="description" id="description" cols="30" rows="10"></textarea>
-                                </div>
-                            </div>
-                            <div class="form__footer text_sm">
-                                <div class="personal-policy">
-                                    <p>
-                                        Нажимая на кнопку «Записаться», я даю свое согласие с
-                                        <a href="#" class="link link_modal">
-                                            политикой обработки персональных данных
-                                        </a>
-                                    </p>
-                                </div>
-                                <div class="btn-block">
-                                    <a class="link link_border-grey">Закрыть</a>
-                                    <button type="submit" class="btn btn_primary">Записаться</button>
-                                </div>
-                            </div>
-                        </form>
-                        </form>
-                    </div>
-
                 </div>
             </div>
         </div>
-        <div class="overlay-modal"></div>
     </div>
 </div>
 </body>
