@@ -3,16 +3,19 @@
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
+  min-height: 100vh;
   .section__content p{
     margin-bottom: 2.167em;
   }
   .section__header{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     .btn-wrap{
       margin-top: auto;
     }
+  }
+  .row {
+    height: 100%;
   }
 }

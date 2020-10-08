@@ -5,11 +5,9 @@
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1206px;
-  min-width: 340px;
-  background-color: $bg-light-100;
+  min-width: 320px;
   overflow-y: auto;
   max-height: 100%;
-  min-height: 550px;
 
   &__header {
     padding: 0 20px 22px;
@@ -19,6 +17,7 @@
   }
 
   &__body {
+    background-color: $bg-light-100;
     padding: 24px 58px 38px;
   }
 
@@ -137,16 +136,23 @@
 }
 
 .overlay-modal {
-  display: none;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
   background-color: $color-primary;
+  opacity: 0;
+  transform: scaleX(0);
+  -webkit-transition: .45s;
+  -moz-transition: .45s;
+  -ms-transition: .45s;
+  -o-transition: .45s;
+  transition: .45s;
   z-index: 400;
 
   &.active_popup {
-    display: block;
+    opacity: 1;
+    transform: scaleX(1);
   }
 }

@@ -1,14 +1,22 @@
-.section-services{
+.section-services {
   background-position: right 0;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
-  .section__title{
+  min-height: 940px;
+
+  @media screen and (max-width: 1920px) {
+    min-height: 50vw;
+  }
+
+  .section__title {
     max-width: 635px;
   }
-  .nav-services li{
-    margin-bottom: .5em;
-    &:last-child{
+
+  .nav-services li {
+    margin-bottom: 1em;
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
