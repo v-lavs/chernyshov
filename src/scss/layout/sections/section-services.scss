@@ -5,6 +5,11 @@
   background-size: contain;
   .section__title{
     max-width: 635px;
-
+  }
+  .nav-services li{
+    margin-bottom: .5em;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
