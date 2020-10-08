@@ -31,16 +31,17 @@
   .block-nav {
     width: 8%;
     max-width: 115px;
-
+    font-size: 14px;
     display: flex;
     flex-direction: column;
 
-    &_prev{
+    &_prev {
       order: -1;
       text-align: right;
       align-items: flex-end;
     }
-    &__name{
+
+    &__name {
       margin-bottom: 17px;
     }
   }
@@ -58,7 +59,7 @@
   margin-top: 0;
 
   &:hover,
-  &:focus{
+  &:focus {
     border-color: $color-primary;
     color: $color-primary;
   }
