@@ -6,6 +6,10 @@
     position: static;
   }
 
+  .section__title {
+    animation-delay: 100ms;
+  }
+
   .section__bg-image {
     position: absolute;
     bottom: 0;

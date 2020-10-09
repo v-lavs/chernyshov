@@ -1,7 +1,9 @@
 .footer {
+  position: relative;
   padding: 90px 10rem 90px 8.25rem;
   background-color: $bg-dark;
   color: $color-light;
+  z-index: 10;
 
   .heading_lg {
     line-height: 1;
@@ -43,6 +45,24 @@
         width: 31px;
         height: 31px;
       }
+    }
+  }
+}
+
+@include respond-to($lg) {
+  .footer {
+    .col-6 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footer__contacts {
+      padding-top: 30px;
+      padding-left: 0;
+    }
+
+    .footer__nav {
+      justify-content: center;
     }
   }
 }

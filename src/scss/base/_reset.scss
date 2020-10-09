@@ -25,24 +25,28 @@ a:hover                        { text-decoration:none; }
 
 /* Animation */
 
-.slide-right {
-  position: relative;
-  opacity: 0;
-  &.active {
+.section_active {
+  .slide-right {
     -webkit-animation: slide-right forwards 300ms;
     -o-animation: slide-right forwards 300ms;
     animation: slide-right forwards 300ms;
   }
+
+  .slide-top {
+    -webkit-animation: slide-top forwards 300ms;
+    -o-animation: slide-top forwards 300ms;
+    animation: slide-top forwards 300ms;
+  }
+}
+
+.slide-right {
+  position: relative;
+  opacity: 0;
 }
 
 .slide-top {
   position: relative;
   opacity: 0;
-  &.active {
-    -webkit-animation: slide-top forwards 300ms;
-    -o-animation: slide-top forwards 300ms;
-    animation: slide-top forwards 300ms;
-  }
 }
 
 @keyframes slide-right {

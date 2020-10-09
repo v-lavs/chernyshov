@@ -5,63 +5,42 @@
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ./swiper-bundle.esm.browser.min.js ;
 //= include ./jquery.waypoints.min.js ;
-
-
-
-function scrollToAnchor(el, time) {
-    $('.content').animate({scrollTop: $(el).get(0).offsetTop}, time);
-}
-
-let scrolling = false;
-const scrollingTime = 1000;
+//= include ./scrollify.js ;
 
 $(document).ready(function () {
-
-    var waypoints = $('.js-detect').waypoint(function(direction) {
-       const $el = $(this.element);
-       const delay = $el.data('delay') || 0;
-       setTimeout(function () {
-           $el.addClass('active');
-       }, +delay);
-    }, {
-        offset: '75%'
+    $('.nav-services li').each(function (i, item) {
+        $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
     });
 
-
-
-    const slideClass = 'content__slide';
-
-    document.querySelector('.content').addEventListener('wheel', function (e) {
-
-        const scrollTop = document.querySelector('.content').scrollTop;
-
-        if (!scrolling) {
-            const section = $(e.target).hasClass(slideClass) ? e.target : $(e.target).parents('.' + slideClass);
-            let nextSection;
-            if (e.deltaY > 0) {
-                const nextEl = $(section).next('.' + slideClass);
-                nextSection = nextEl.length > 0 ? nextEl : $('.footer');
-            } else {
-                nextSection = $(section).prev('.' + slideClass);
-            }
-
-            if (nextSection.length > 0) {
-                // scrolling = true;
-                // scrollToAnchor(nextSection, scrollingTime);
-                //
-                // setTimeout(function () {
-                //     scrolling = false;
-                // }, scrollingTime)
-            }
+    $.scrollify({
+        section: ".content__slide",
+        scrollSpeed: 1000,
+        before: function (currIndex, sections) {
+            sections.forEach(function (section) {
+                section.removeClass('section_active')
+            });
+            sections[currIndex].addClass('section_active');
         }
     });
 
     //SLIDER
     let swiper = new Swiper('.service-slider', {
         navigation: {
-            nextEl: '.service-slider .swiper-button-next',
-            prevEl: '.service-slider .swiper-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
+    });
+
+    $('.nav-services a').click(function (e) {
+        e.preventDefault();
+        const index = $(e.target).parent().data('slide') ;
+
+        if($('.service-slider').length > 0) {
+            $('html, body').animate({
+                scrollTop: $('.service-slider').offset().top
+            }, 750);
+        }
+        swiper.slideTo(+index);
     });
 
     // POPUP
