@@ -1,13 +1,9 @@
 .modal {
   position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1206px;
-  min-width: 320px;
-  overflow-y: auto;
-  max-height: 100%;
+  min-width: 300px;
+  margin: auto;
 
   &__header {
     padding: 0 20px 22px;
@@ -132,11 +128,12 @@
       top: -25px;
     }
   }
-
 }
 
 .overlay-modal {
   position: fixed;
+  display: flex;
+  padding: 2rem 1rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -144,6 +141,7 @@
   background-color: $color-primary;
   opacity: 0;
   transform: scaleX(0);
+  overflow-y: auto;
   -webkit-transition: .45s;
   -moz-transition: .45s;
   -ms-transition: .45s;

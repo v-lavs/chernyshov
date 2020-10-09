@@ -32,7 +32,7 @@
             </div>
 
             <div class="sidebar__contacts text_md">
-                <a href="tel:8 800 444-55-55" class="link link_primary">8 800 444-55-55
+                <a href="tel:8 800 444-55-55" class="link link_primary">
                     <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.43 154.63">
                         <defs>
                             <style>.cls-1 {
@@ -49,6 +49,7 @@
                             </g>
                         </g>
                     </svg>
+                    8 800 444-55-55
                 </a>
                 <a href="#" class="link link_primary popup-trigger">Записаться на приём</a>
             </div>
@@ -122,7 +123,8 @@
 
     <div class="content">
         <div class="sections__slider">
-            <section class="section content__slide section-intro" style="background-image: url(assets/img/bg-1.jpg);">
+            <section class="section content__slide section-intro">
+                <div class="section__bg" style="background-image: url(assets/img/bg-1.jpg);"></div>
                 <header class="section__header">
                     <h2 class="heading heading_xl section__title">Мануальная терапия для взрослых и детей</h2>
                 </header>
@@ -146,7 +148,7 @@
                             Нарушения осанки
                         </p>
                     </div>
-                    <div class="">
+                    <div class="affliction__item">
                         <ul class="certificate">
                             <li class="certificate__item">
                                 <a href="#" class="link link_primary">
@@ -166,30 +168,47 @@
                 </div>
             </section>
 
-            <section class="section content__slide section-services" style="background-image: url(assets/img/doctor.png);">
+            <section class="section content__slide section-services" >
                 <header class="section__header">
-                    <h2 class="heading heading_xl section__title">Выполняю следующие виды терапии</h2>
+                    <div class="section__bg-image" style="background-image: url(assets/img/doctor.png);"></div>
+                    <h2 class="heading heading_xl section__title js-detect slide-top">Выполняю следующие виды терапии</h2>
                 </header>
+
                 <nav class="nav-services text_lg">
                     <ul>
-                        <li><a class="link link_border-grey" href="#">Мануальная терапия</a></li>
-                        <li><a class="link link_border-grey" href="#">Остеопатия</a></li>
-                        <li><a class="link link_border-grey" href="#">Лечебный массаж</a></li>
-                        <li><a class="link link_border-grey" href="#">Общий массаж</a></li>
-                        <li><a class="link link_border-grey" href="#">Антицеллюлитный массаж</a></li>
-                        <li><a class="link link_border-grey" href="#">Спортивный массаж</a></li>
-                        <li><a class="link link_border-grey" href="#">Профилактика</a></li>
+                        <li class="slide-right js-detect" data-slide="0" data-delay="25">
+                            <a class="link link_border-grey" href="#">Мануальная терапия</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="1" data-delay="50">
+                            <a class="link link_border-grey" href="#">Остеопатия</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="2" data-delay="100">
+                            <a class="link link_border-grey" href="#">Лечебный массаж</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="3" data-delay="150">
+                            <a class="link link_border-grey" href="#">Общий массаж</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="4" data-delay="200">
+                            <a class="link link_border-grey" href="#">Антицеллюлитный массаж</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="5" data-delay="250">
+                            <a class="link link_border-grey" href="#">Спортивный массаж</a>
+                        </li>
+                        <li class="slide-right js-detect" data-slide="6" data-delay="300">
+                            <a class="link link_border-grey" href="#">Профилактика</a>
+                        </li>
                     </ul>
                 </nav>
             </section>
 
-            <section class="section content__slide section-usage" style="background-image: url(assets/img/bg-2.png);">
-                <div class="row">
-                    <div class="col col-6">
+            <section class="section content__slide section-usage"  style="background-image: url(assets/img/bg-2.png);">
+                <div class="section__bg" style="background-image: url(assets/img/bg-2.png);"></div>
+                <div class="row row_items-start">
+                    <div class="col col-6 header-col">
                         <header class="section__header">
                             <h2 class="heading heading_xl section__title">Когда нужна мануальная терапия</h2>
                             <div class="btn-wrap">
-                                <button class="btn btn_primary popup-trigger">Записаться на приём</button>
+                                <button class="btn btn_primary popup-trigger text_md">Записаться на приём</button>
                             </div>
                         </header>
                     </div>
@@ -211,25 +230,25 @@
                 <div class="service-slider">
                     <div class="swiper-wrapper">
                         <article class="section swiper-slide">
-                            <div class="swiper-slide__heading">
-                                <!-- Add Arrows -->
-                                <div class="block-nav block-nav_next">
-                                    <div class="block-nav__name">Мануальная терапия</div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                                <div class="block-nav block-nav_prev">
-                                    <div class="block-nav__name">Обучение</div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-
                             <div class="row dynamic-content">
-                                <div class="col col-8">
+                                <div class="col col-8 service-slider__content">
                                     <header class="section__header">
-                                        <div class="services text_lg">Услуги</div>
+                                        <div class="section__sub-title text_lg">Услуги</div>
 
                                         <h2 class="heading heading_xl section__title">Мануальная терапия</h2>
                                     </header>
+
+                                    <div class="swiper-slide__heading">
+                                        <!-- Add Arrows -->
+                                        <div class="block-nav block-nav_next">
+                                            <div class="block-nav__name">Мануальная терапия</div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                        <div class="block-nav block-nav_prev">
+                                            <div class="block-nav__name">Обучение</div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
 
                                     <div class="section__content text_sm">
                                         <p>Лечебный массаж применяется для ускорения восстановления работы органов и
@@ -266,7 +285,153 @@
                                             занятия.</p>
                                     </div>
                                 </div>
-                                <aside class="col col-4 sidebar-appointed-at">
+                                <aside class="col col-4 sidebar-appointed-at text_xs">
+                                    <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
+                                    <ul>
+                                        <li> сердечно-сосудистой системы;</li>
+                                        <li> сердечной недостаточности, гипертонии/гипотонии,</li>
+                                        <li> при реабилитации после инфаркта миокарда;</li>
+                                        <li> опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
+                                        <li> дыхательных органов (бронхиальной астмы, хроническом бронхите,
+                                            пневмонии);
+                                        </li>
+                                        <li> радикулите;</li>
+                                        <li> невралгии;</li>
+                                    </ul>
+
+                                </aside>
+                            </div>
+                        </article>
+                        <article class="section swiper-slide">
+                            <div class="row dynamic-content">
+                                <div class="col col-8 service-slider__content">
+                                    <header class="section__header">
+                                        <div class="section__sub-title text_lg">Услуги</div>
+
+                                        <h2 class="heading heading_xl section__title">Мануальная терапия</h2>
+                                    </header>
+
+                                    <div class="swiper-slide__heading">
+                                        <!-- Add Arrows -->
+                                        <div class="block-nav block-nav_next">
+                                            <div class="block-nav__name">Мануальная терапия</div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                        <div class="block-nav block-nav_prev">
+                                            <div class="block-nav__name">Обучение</div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section__content text_sm">
+                                        <p>Лечебный массаж применяется для ускорения восстановления работы органов и
+                                            участков тела при травмах и заболеваниях.</p>
+                                        <p>Лечение массажем помогает уменьшить срок реабилитации пациента: быстрее
+                                            снижаются
+                                            болевые ощущения, рассасываются отеки, улучшается эластичность мышечных
+                                            волокон,
+                                            нормализуются обменные процессы.</p>
+                                        <p>Лечебный массаж усиливает кровообращение, способствует оттоку лимфы из тканей
+                                            и
+                                            внутренних органов, стимулирует работу иммунной системы. Активно применяется
+                                            в
+                                            рамках восстановительной терапии, для реабилитации пациентов, перенесших
+                                            травмы
+                                            или длительное течение хронических заболеваний.</p>
+                                        <p>Профессиональный лечебный массаж поможет быстро снять боль при заболеваниях
+                                            позвоночника, отменяя лекарственные блокады и прием потенциально
+                                            небезопасных
+                                            препаратов</p>
+                                        <p>Лечебный массаж может быть общим или локальным — массаж шейно-воротниковой
+                                            зоны,
+                                            спины, рук, ног, живота. Воздействие рук массажиста активизирует рецепторы в
+                                            коже и подлежащих тканях, снимает напряжение и мышечные спазмы, улучшает
+                                            кровоснабжение.</p>
+                                        <p>Массаж может быть как лечебной, так и профилактической процедурой. Регулярные
+                                            курсы показаны всем людям, не имеющим противопоказаний.</p>
+                                        <p>Лечебный массаж противопоказан при любых острых и обострившихся заболеваниях
+                                            опорно-двигательного аппарата и внутренних органов, инфекционных и
+                                            гнойно-воспалительных заболеваниях, лихорадке, интоксикации, недостаточности
+                                            внутренних органов, злокачественных опухолях.</p>
+                                        <p>Обезболивающий эффект достигается уже при первых трех сеансах. Процедура
+                                            успокаивает и расслабляет опорно-двигательный аппарат уже с первого
+                                            занятия.</p>
+                                    </div>
+                                </div>
+                                <aside class="col col-4 sidebar-appointed-at text_xs">
+                                    <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
+                                    <ul>
+                                        <li> сердечно-сосудистой системы;</li>
+                                        <li> сердечной недостаточности, гипертонии/гипотонии,</li>
+                                        <li> при реабилитации после инфаркта миокарда;</li>
+                                        <li> опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
+                                        <li> дыхательных органов (бронхиальной астмы, хроническом бронхите,
+                                            пневмонии);
+                                        </li>
+                                        <li> радикулите;</li>
+                                        <li> невралгии;</li>
+                                    </ul>
+
+                                </aside>
+                            </div>
+                        </article>
+                        <article class="section swiper-slide">
+                            <div class="row dynamic-content">
+                                <div class="col col-8 service-slider__content">
+                                    <header class="section__header">
+                                        <div class="section__sub-title text_lg">Услуги</div>
+
+                                        <h2 class="heading heading_xl section__title">Мануальная терапия</h2>
+                                    </header>
+
+                                    <div class="swiper-slide__heading">
+                                        <!-- Add Arrows -->
+                                        <div class="block-nav block-nav_next">
+                                            <div class="block-nav__name">Мануальная терапия</div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                        <div class="block-nav block-nav_prev">
+                                            <div class="block-nav__name">Обучение</div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="section__content text_sm">
+                                        <p>Лечебный массаж применяется для ускорения восстановления работы органов и
+                                            участков тела при травмах и заболеваниях.</p>
+                                        <p>Лечение массажем помогает уменьшить срок реабилитации пациента: быстрее
+                                            снижаются
+                                            болевые ощущения, рассасываются отеки, улучшается эластичность мышечных
+                                            волокон,
+                                            нормализуются обменные процессы.</p>
+                                        <p>Лечебный массаж усиливает кровообращение, способствует оттоку лимфы из тканей
+                                            и
+                                            внутренних органов, стимулирует работу иммунной системы. Активно применяется
+                                            в
+                                            рамках восстановительной терапии, для реабилитации пациентов, перенесших
+                                            травмы
+                                            или длительное течение хронических заболеваний.</p>
+                                        <p>Профессиональный лечебный массаж поможет быстро снять боль при заболеваниях
+                                            позвоночника, отменяя лекарственные блокады и прием потенциально
+                                            небезопасных
+                                            препаратов</p>
+                                        <p>Лечебный массаж может быть общим или локальным — массаж шейно-воротниковой
+                                            зоны,
+                                            спины, рук, ног, живота. Воздействие рук массажиста активизирует рецепторы в
+                                            коже и подлежащих тканях, снимает напряжение и мышечные спазмы, улучшает
+                                            кровоснабжение.</p>
+                                        <p>Массаж может быть как лечебной, так и профилактической процедурой. Регулярные
+                                            курсы показаны всем людям, не имеющим противопоказаний.</p>
+                                        <p>Лечебный массаж противопоказан при любых острых и обострившихся заболеваниях
+                                            опорно-двигательного аппарата и внутренних органов, инфекционных и
+                                            гнойно-воспалительных заболеваниях, лихорадке, интоксикации, недостаточности
+                                            внутренних органов, злокачественных опухолях.</p>
+                                        <p>Обезболивающий эффект достигается уже при первых трех сеансах. Процедура
+                                            успокаивает и расслабляет опорно-двигательный аппарат уже с первого
+                                            занятия.</p>
+                                    </div>
+                                </div>
+                                <aside class="col col-4 sidebar-appointed-at text_xs">
                                     <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
                                     <ul>
                                         <li> сердечно-сосудистой системы;</li>
@@ -284,109 +449,6 @@
                             </div>
                         </article>
 
-                        <article class="section swiper-slide">
-                            <div class="row">+
-                                <header class="section__header">
-                                    <div class="services text_lg">Услуги</div>
-                                    <h2 class="heading heading_xl section__title">Остеопатия</h2>
-                                </header>
-
-                                <div class="section__content">
-                                    <p>Лечебный массаж применяется для ускорения восстановления работы органов и
-                                        участков тела при травмах и заболеваниях.</p>
-                                    <p>Лечение массажем помогает уменьшить срок реабилитации пациента: быстрее снижаются
-                                        болевые ощущения, рассасываются отеки, улучшается эластичность мышечных волокон,
-                                        нормализуются обменные процессы.</p>
-                                    <p>Лечебный массаж усиливает кровообращение, способствует оттоку лимфы из тканей и
-                                        внутренних органов, стимулирует работу иммунной системы. Активно применяется в
-                                        рамках восстановительной терапии, для реабилитации пациентов, перенесших травмы
-                                        или длительное течение хронических заболеваний.</p>
-                                    <p>Профессиональный лечебный массаж поможет быстро снять боль при заболеваниях
-                                        позвоночника, отменяя лекарственные блокады и прием потенциально небезопасных
-                                        препаратов</p>
-                                    <p>Лечебный массаж может быть общим или локальным — массаж шейно-воротниковой зоны,
-                                        спины, рук, ног, живота. Воздействие рук массажиста активизирует рецепторы в
-                                        коже и подлежащих тканях, снимает напряжение и мышечные спазмы, улучшает
-                                        кровоснабжение.</p>
-                                    <p>Массаж может быть как лечебной, так и профилактической процедурой. Регулярные
-                                        курсы показаны всем людям, не имеющим противопоказаний.</p>
-                                    <p>Лечебный массаж противопоказан при любых острых и обострившихся заболеваниях
-                                        опорно-двигательного аппарата и внутренних органов, инфекционных и
-                                        гнойно-воспалительных заболеваниях, лихорадке, интоксикации, недостаточности
-                                        внутренних органов, злокачественных опухолях.</p>
-                                    <p>Обезболивающий эффект достигается уже при первых трех сеансах. Процедура
-                                        успокаивает и расслабляет опорно-двигательный аппарат уже с первого занятия.</p>
-                                </div>
-
-                                <aside class="col col-4">
-                                    <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
-
-                                    <ul>
-                                        <li>— сердечно-сосудистой системы — сердечной недостаточности,
-                                            гипертонии/гипотонии,
-                                        </li>
-                                        <li>— при реабилитации после инфаркта миокарда;</li>
-                                        <li>— опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
-                                        <li>— дыхательных органов (бронхиальной астмы, хроническом бронхите,
-                                            пневмонии);
-                                        </li>
-                                        <li>— радикулите;</li>
-                                        <li>— невралгии;</li>
-                                    </ul>
-                                </aside>
-                            </div>
-                        </article>
-                        <article class="section swiper-slide">
-                            <header class="section__header">
-                                <div class="services text_lg">Услуги</div>
-                                <h2 class="heading heading_xl section__title">Лечебный массаж</h2>
-                            </header>
-                            <div class="row">
-                                <div class="section__content">
-                                    <p>Лечебный массаж применяется для ускорения восстановления работы органов и
-                                        участков тела при травмах и заболеваниях.</p>
-                                    <p>Лечение массажем помогает уменьшить срок реабилитации пациента: быстрее снижаются
-                                        болевые ощущения, рассасываются отеки, улучшается эластичность мышечных волокон,
-                                        нормализуются обменные процессы.</p>
-                                    <p>Лечебный массаж усиливает кровообращение, способствует оттоку лимфы из тканей и
-                                        внутренних органов, стимулирует работу иммунной системы. Активно применяется в
-                                        рамках восстановительной терапии, для реабилитации пациентов, перенесших травмы
-                                        или длительное течение хронических заболеваний.</p>
-                                    <p>Профессиональный лечебный массаж поможет быстро снять боль при заболеваниях
-                                        позвоночника, отменяя лекарственные блокады и прием потенциально небезопасных
-                                        препаратов</p>
-                                    <p>Лечебный массаж может быть общим или локальным — массаж шейно-воротниковой зоны,
-                                        спины, рук, ног, живота. Воздействие рук массажиста активизирует рецепторы в
-                                        коже и подлежащих тканях, снимает напряжение и мышечные спазмы, улучшает
-                                        кровоснабжение.</p>
-                                    <p>Массаж может быть как лечебной, так и профилактической процедурой. Регулярные
-                                        курсы показаны всем людям, не имеющим противопоказаний.</p>
-                                    <p>Лечебный массаж противопоказан при любых острых и обострившихся заболеваниях
-                                        опорно-двигательного аппарата и внутренних органов, инфекционных и
-                                        гнойно-воспалительных заболеваниях, лихорадке, интоксикации, недостаточности
-                                        внутренних органов, злокачественных опухолях.</p>
-                                    <p>Обезболивающий эффект достигается уже при первых трех сеансах. Процедура
-                                        успокаивает и расслабляет опорно-двигательный аппарат уже с первого занятия.</p>
-                                </div>
-
-                                <aside class="col-4">
-                                    <h3 class="heading heading_xs">Лечебный массаж назначается при заболеваниях:</h3>
-
-                                    <ul>
-                                        <li>— сердечно-сосудистой системы — сердечной недостаточности,
-                                            гипертонии/гипотонии,
-                                        </li>
-                                        <li>— при реабилитации после инфаркта миокарда;</li>
-                                        <li>— опорно-двигательного аппарата (остеохондроз, сколиоз);</li>
-                                        <li>— дыхательных органов (бронхиальной астмы, хроническом бронхите,
-                                            пневмонии);
-                                        </li>
-                                        <li>— радикулите;</li>
-                                        <li>— невралгии;</li>
-                                    </ul>
-                                </aside>
-                            </div>
-                        </article>
                     </div>
                 </div>
             </section>
@@ -395,13 +457,14 @@
         <footer class="footer text_md">
             <div class="row">
                 <div class="col-6">
-                    <div class="phone">
+                    <div class="heading_lg">
                         <a href="tel:8 800 444-55-55">8 800 444-55-55</a>
                     </div>
-                    <div class="footer__address">Липецк, ул. Максима Горького, 11</div>
+                    <div class="footer__address text_md">Липецк, ул. Максима Горького, 11</div>
                 </div>
-                <div class="col-6">
-                    <nav class="footer__nav">
+
+                <div class="col-6 footer__contacts">
+                    <nav class="footer__nav heading_lg">
                         <a href="#">
                             <svg class="social-icon social-icon_vk" xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 191.57 109.29">
@@ -457,7 +520,7 @@
                             </svg>
                         </a>
                     </nav>
-                    <div><a class="link link_primary popup-trigger" href="#">Записаться на приём</a></div>
+                    <div class="text_md"><a class="link link_primary popup-trigger" href="#">Записаться на приём</a></div>
                 </div>
             </div>
         </footer>
@@ -532,5 +595,7 @@
     </div>
 </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/sticksy/dist/sticksy.min.js"></script>
 <script src="dist/scripts.js"></script>
 </html>

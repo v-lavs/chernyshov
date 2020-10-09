@@ -2,8 +2,10 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  &_items-start {
+    align-items: flex-start;
+  }
 }
-
 
 .col {
   flex-shrink: 0;

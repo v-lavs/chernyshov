@@ -1,9 +1,22 @@
 .section {
+  position: relative;
   min-height: 100vh;
+  width: 100%;
   padding: 90px 10rem 90px 8.25rem;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &__title {
     line-height: 1;
     margin-bottom: 1em;
+  }
+}
+
+@include respond-to($screen-lg) {
+  .section {
+    padding-right: 8rem;
   }
 }

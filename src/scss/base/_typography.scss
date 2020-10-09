@@ -8,11 +8,42 @@
   &_xl {
     font-size: 70px;
   }
+  &_lg {
+    font-size: 58px;
+  }
   &_sm {
     font-size: 30px;
   }
   &_xs {
     font-size: 20px;
+  }
+  @include respond-to($screen-lg) {
+    &_xl {
+      font-size: 60px;
+    }
+    &_lg {
+      font-size: 48px;
+    }
+    &_sm {
+      font-size: 26px;
+    }
+    &_xs {
+      font-size: 18px;
+    }
+  }
+  @include respond-to($screen-md) {
+    &_xl {
+      font-size: 52px;
+    }
+    &_lg {
+      font-size: 42px;
+    }
+    &_sm {
+      font-size: 22px;
+    }
+    &_xs {
+      font-size: 16px;
+    }
   }
 }
 
@@ -32,5 +63,32 @@
   }
   &_xs {
     font-size: 16px;
+  }
+
+  @include respond-to($screen-lg) {
+    &_lg {
+      font-size: 26px;
+    }
+    &_md {
+      font-size: 20px;
+    }
+    &_sm {
+      font-size: 18px;
+    }
+    &_xs {
+      font-size: 14px;
+    }
+  }
+
+  @include respond-to($screen-md) {
+    &_lg {
+      font-size: 22px;
+    }
+    &_md {
+      font-size: 18px;
+    }
+    &_sm {
+      font-size: 16px;
+    }
   }
 }

@@ -6,12 +6,13 @@
 @import 'base/typography';
 
 @import 'components/button';
-@import 'components/modal';
 
+@import 'layout/layout';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/sidebar';
 @import 'layout/section';
 
 @import 'pages/home';
+@import 'components/modal';
+

@@ -1,8 +1,17 @@
 .section-intro {
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  padding-top: 150px;
+  min-height: 75.5vw;
+
+  .section__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 0;
+  }
   padding-bottom: 90px;
   min-height: 75.5vw;
 
@@ -19,7 +28,6 @@
   .text_md p {
     position: relative;
     margin-bottom: 1.667em;
-    //padding-right: 2.083em;
     padding-right: 1.083em;
     padding-left: 1.33em;
 
@@ -34,7 +42,6 @@
       top: .7em;
       z-index: 1;
     }
-
   }
 
   .part-left,
@@ -46,7 +53,7 @@
     justify-content: space-between;
 
     &__item {
-      width: 35%;
+      width: 33.33%;
     }
   }
 
@@ -55,7 +62,6 @@
     max-width: 287px;
     padding: 20px 45px 18px 76px;
     border-radius: 10px;
-    //margin-left: 20px;
     background-color: rgba(255, 255, 255, .5);
 
     &__item {
@@ -84,6 +90,17 @@
       width: 31px;
       height: 32px;
       display: block;
+    }
+  }
+
+  @include respond-to($md) {
+      padding-top: 90px;
+  }
+
+  @include respond-to($sm) {
+    padding-top: 0;
+    .section__header {
+      min-height: 50vh;
     }
   }
 }
