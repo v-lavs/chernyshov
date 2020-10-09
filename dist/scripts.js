@@ -20950,7 +20950,7 @@ $(document).ready(function () {
 
     $.scrollify({
         section: ".content__slide",
-        scrollSpeed: 1000,
+        scrollSpeed: 900,
         before: function (currIndex, sections) {
             sections.forEach(function (section) {
                 section.removeClass('section_active')

@@ -49,8 +49,10 @@
   }
 }
 
-@include respond-to($lg) {
+@include respond-to($md) {
   .footer {
+    padding-top: 55px;
+    padding-bottom: 55px;
     .col-6 {
       width: 100%;
       text-align: center;
