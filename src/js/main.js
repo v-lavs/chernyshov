@@ -4,7 +4,6 @@
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ./swiper-bundle.esm.browser.min.js ;
-//= include ./jquery.waypoints.min.js ;
 //= include ./scrollify.js ;
 
 $(document).ready(function () {
