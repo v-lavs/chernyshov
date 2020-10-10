@@ -10,6 +10,7 @@
   background-size: 100% 100vh;
   background-attachment: fixed;
   color: white;
+
   &:before {
     content: '';
     display: block;
@@ -28,6 +29,10 @@
 
     p {
       margin-bottom: 2.167em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -46,6 +51,10 @@
     }
   }
 
+  .btn_primary.btn_primary-mob {
+    display: none !important;
+  }
+
   .header-col {
     position: sticky;
     top: 0;
@@ -53,5 +62,43 @@
 
   .row {
     position: relative;
+  }
+
+  @include respond-to($xs) {
+    background-color: #383733;
+    -webkit-background-size: 0;
+    background-size: 0;
+    .col-6 {
+      width: 100%;
+    }
+    .section__content p {
+      margin-bottom: 1.67em;
+    }
+    .section__header {
+      padding-top: 70px;
+      height: auto;
+      padding-bottom: 10px;
+
+      .btn {
+        display: none;
+      }
+    }
+    .header-col {
+      position: relative;
+    }
+    .section__content {
+      padding: 0 0 52px 56px;
+      font-size: 20px;
+    }
+    .btn_primary.btn_primary-mob {
+      display: inline-block !important;
+      font-size: 24px;
+      font-family: $main-font;
+      font-weight: 400;
+      padding: 16px 56px 17px
+    }
+    .btn-wrap{
+      text-align: center;
+    }
   }
 }

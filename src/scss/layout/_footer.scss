@@ -3,7 +3,7 @@
   padding: 90px 10rem 90px 8.25rem;
   background-color: $bg-dark;
   color: $color-light;
-  z-index: 10;
+  //z-index: 10;
 
   .heading_lg {
     line-height: 1;
@@ -47,10 +47,8 @@
       }
     }
   }
-}
+  @include respond-to($md) {
 
-@include respond-to($md) {
-  .footer {
     padding-top: 55px;
     padding-bottom: 55px;
     .col-6 {
@@ -67,4 +65,10 @@
       justify-content: center;
     }
   }
+
+  @include respond-to($xxs) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
+

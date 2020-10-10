@@ -10,7 +10,7 @@
   }
 
   &__title {
-    line-height: 1;
+    line-height: 1.12;
     margin-bottom: 1em;
   }
 }
@@ -20,3 +20,16 @@
     padding-right: 8rem;
   }
 }
+
+@media all and (max-width: 620px) {
+  .section{
+    padding: 42px 5rem 60px;
+  }
+}
+
+@include respond-to($xxs){
+  .section{
+    padding: 42px 30px 60px;
+  }
+}
+

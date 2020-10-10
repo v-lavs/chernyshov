@@ -5,18 +5,23 @@
 
 .heading {
   font-weight: 700;
+
   &_xl {
     font-size: 70px;
   }
+
   &_lg {
     font-size: 58px;
   }
+
   &_sm {
     font-size: 30px;
   }
+
   &_xs {
     font-size: 20px;
   }
+
   @include respond-to($screen-lg) {
     &_xl {
       font-size: 60px;
@@ -30,6 +35,7 @@
     &_xs {
       font-size: 18px;
     }
+
   }
   @include respond-to($screen-md) {
     &_xl {
@@ -53,6 +59,11 @@
       font-size: 40px;
     }
   }
+  @include respond-to($xxs) {
+   &_xl {
+      font-size: 40px;
+    }
+  }
 }
 
 /*
@@ -63,12 +74,15 @@
   &_lg {
     font-size: 30px;
   }
+
   &_md {
     font-size: 24px;
   }
+
   &_sm {
     font-size: 20px;
   }
+
   &_xs {
     font-size: 16px;
   }

@@ -49,8 +49,12 @@
     }
   }
 
-  .link_primary {
+  &__contacts li {
     margin-bottom: 20px;
+  }
+
+  .link_primary {
+    display: inline;
 
     .icon-phone {
       position: absolute;
@@ -85,6 +89,66 @@
     height: 100%;
     vertical-align: middle;
   }
+
+  .certificate_mobile {
+    display: none;
+    width: 100%;
+    padding: 20px 0 18px 0;
+
+    .certificate__item {
+      margin-bottom: 1.4em;
+      text-align: left;
+      font-size: 20px;
+      line-height: 1.28;
+      padding-left: 45px;
+
+      .link_primary {
+        position: relative;
+
+        .img {
+          position: absolute;
+          left: -45px;
+          top: 5px;
+          width: 30px;
+          height: 32px;
+        }
+      }
+
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .close {
+    display: none;
+    width: 27px;
+    height: 27px;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 47px;
+    right: 30px;
+    padding: 5px;
+    border: 0;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      display: block;
+      background-image: url(../assets/img/icons/close-button.svg);
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      background-position: 0 0;
+      width: 27px;
+      height: 27px;
+      z-index: 1;
+    }
+  }
 }
 
 @include respond-to($screen-lg) {
@@ -111,6 +175,7 @@
 
     .person-info {
       padding-top: 10px;
+
       &__thumb {
         width: 70px;
         height: 70px;
@@ -119,8 +184,56 @@
   }
 }
 
+
 @include respond-to($sm) {
+  .content {
+    padding-left: 0;
+  }
+  .link_primary.link_primary-mob {
+    border: none;
+    padding: 16px 56px 17px;
+    display: inline-block;
+    border-radius: 40px;
+    background: $color-primary;
+    color: $color-light;
+  }
   .sidebar {
+    width: 100%;
+    max-width: 400px;
+    padding-top: 46px;
+    transform: translateX(-100%);
+    transition: .35s;
+    z-index: 40;
+
+    &__education {
+      max-width: 210px;
+      font-weight: 600;
+    }
+
+    &__contacts {
+      margin-bottom: 38px;
+    }
+
+    &__nav,
+    .person-info {
+      display: none;
+    }
+
+    .link_primary {
+      font-size: 24px;
+    }
+
+    &__contacts {
+      li {
+        margin-bottom: 25px;
+      }
+    }
+
+    .certificate_mobile {
+      display: block;
+      margin-bottom: 90px;
+    }
+
     align-items: center;
     text-align: center;
 
