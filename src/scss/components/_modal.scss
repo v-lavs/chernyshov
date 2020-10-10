@@ -111,9 +111,12 @@
       left: 0;
     }
 
-    .input:focus,
+    .input:focus{
+      border-bottom:2px solid $color-primary;
+    }
     .description:focus {
-      border-color: $color-primary;
+      border:2px solid $color-primary;
+
     }
 
     .input:focus + .label-input span {
@@ -126,6 +129,59 @@
       font-size: 16px;
       color: $color-dark;
       top: -25px;
+    }
+  }
+  @include respond-to($xs){
+
+    .form{
+      font-weight: 300;
+    }
+
+    .personal-policy{
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    .form__footer {
+      flex-wrap: wrap;
+      .btn-block{
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+  @media all and (max-width: 620px) {
+    .modal__title{
+      font-size: 40px;
+      line-height: 1.12;
+    }
+    .form{
+      .part-left,
+      .part-right {
+        width: 100%;
+
+      }
+    }
+  }
+  @include respond-to($xxs){
+    .form{
+      .label-textarea {
+        padding-top: 0;
+      }
+      .description{
+        max-height: 110px;
+      }
+      .btn-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+    }
+    .link_border-grey{
+      margin-right: 0;
+      margin-top: 26px;
+      order: 1;
     }
   }
 }
