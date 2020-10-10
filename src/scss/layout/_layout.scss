@@ -207,7 +207,8 @@
     transform: translateX(-100%);
     transition: .35s;
     z-index: 140;
-    &.open-sidebar{
+
+    &.open-sidebar {
       transform: translateX(0);
     }
 
@@ -224,9 +225,11 @@
     .person-info {
       display: none;
     }
-.close{
-  display: block;
-}
+
+    .close {
+      display: block;
+    }
+
     .link_primary {
       font-size: 24px;
     }
@@ -261,5 +264,16 @@
       display: block;
       margin: 0 auto 10px;
     }
+  }
+}
+
+@include respond-to($xxs) {
+  .sidebar .link_primary {
+    font-size: 20px;
+  }
+  .link_primary.link_primary-mob {
+    font-size: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

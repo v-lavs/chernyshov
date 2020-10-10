@@ -175,12 +175,13 @@
       margin-left: 14px;
     }
   }
-  @include respond-to($xs) {
-    .section-service-slider {
-      padding-top: 40px;
-    }
-    .block-nav {
-      max-width: 44%;
-    }
+}
+
+@include respond-to($xs) {
+  .section-service-slider {
+    padding-top: 40px;
+  }
+  .block-nav {
+    max-width: 44%;
   }
 }
