@@ -31,7 +31,8 @@
       width: 40px;
       height: 40px;
       margin-right: 22px;
-      &:last-child{
+
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -47,6 +48,7 @@
       }
     }
   }
+
   @include respond-to($md) {
 
     padding-top: 55px;
@@ -69,6 +71,13 @@
   @include respond-to($xxs) {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  @media all and (max-width: 400px) {
+    .link_primary.link_primary-mob {
+      font-size: 18px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 }
 

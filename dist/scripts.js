@@ -20959,6 +20959,21 @@ $(document).ready(function () {
         }
     });
 
+    //SIDEBAR OPEN
+    var sidebar = $('.sidebar');
+
+    $('.btn-burger').click(function (e) {
+        e.preventDefault();
+        sidebar.addClass('open-sidebar');
+
+    });
+
+    $('.close').click(function (e) {
+        e.preventDefault();
+        sidebar.removeClass('open-sidebar');
+
+    });
+
     //SLIDER
     let swiper = new Swiper('.service-slider', {
         navigation: {

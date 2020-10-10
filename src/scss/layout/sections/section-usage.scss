@@ -101,4 +101,13 @@
       text-align: center;
     }
   }
+
+
+  @media all and (max-width: 400px){
+    .btn_primary.btn_primary-mob {
+      font-size: 18px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
 }
