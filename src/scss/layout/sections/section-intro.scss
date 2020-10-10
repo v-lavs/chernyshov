@@ -139,6 +139,9 @@
       display: block;
     }
   }
+  .link_primary.link_primary-mob{
+    display: inline-block;
+  }
 
    @include respond-to($md) {
     padding-top: 90px;
@@ -189,6 +192,7 @@
         padding-bottom: 18px;
       }
     }
+
     .certificate.certificate_desktop {
       display: none;
     }
