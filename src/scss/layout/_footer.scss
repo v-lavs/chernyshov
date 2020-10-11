@@ -3,8 +3,7 @@
   padding: 90px 10rem 90px 8.25rem;
   background-color: $bg-dark;
   color: $color-light;
-  //z-index: 10;
-
+  height: 300px!important;
   .heading_lg {
     line-height: 1;
     height: 1em;
@@ -68,7 +67,7 @@
     }
   }
   @include respond-to($xs) {
-    height: 346px!important;
+    height: 376px!important;
   }
   @include respond-to($xxs) {
     padding-left: 30px;

@@ -1,3 +1,10 @@
+html,
+body{
+  &.no-scroll{
+    height: 100%;
+    overflow: hidden!important;
+  }
+}
 
 .wrap {
   display: block;

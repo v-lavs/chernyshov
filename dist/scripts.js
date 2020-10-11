@@ -20950,7 +20950,6 @@ $(document).ready(function () {
 
 
     //SCROLLIfY
-    // if ($(window).width() > 1080 && $('body').hasClass('home')) {
         $.scrollify({
             section: ".content__slide, .footer",
             scrollSpeed: 1100,
@@ -20964,10 +20963,6 @@ $(document).ready(function () {
                 sections[currIndex].addClass('section_active');
             }
         });
-    // }
-
-
-
 
 
     //SIDEBAR OPEN
@@ -20976,13 +20971,13 @@ $(document).ready(function () {
     $('.btn-burger').click(function (e) {
         e.preventDefault();
         sidebar.addClass('open-sidebar');
-
+        $('body, html').addClass('no-scroll');
     });
 
     $('.close').click(function (e) {
         e.preventDefault();
         sidebar.removeClass('open-sidebar');
-
+        $('body, html').removeClass('no-scroll');
     });
 
     //SLIDER
@@ -21008,12 +21003,13 @@ $(document).ready(function () {
     // POPUP
     $(".popup-trigger").click(function (e) {
         e.preventDefault();
-
         $("#popup-wrapper").addClass("active_popup");
+        $('body, html').addClass('no-scroll');
     });
 
     $("#popup-wrapper, #close-popup").click(function (e) {
         $("#popup-wrapper").removeClass("active_popup");
+        $('body, html').removeClass('no-scroll');
     });
 
     $(".modal").click(function (e) {
