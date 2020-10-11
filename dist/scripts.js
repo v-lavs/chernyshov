@@ -20943,6 +20943,7 @@ if touchScroll is false - update index
     return scrollify;
 }));
 
+
 $(document).ready(function () {
     $('.nav-services li').each(function (i, item) {
         $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
@@ -20997,12 +20998,13 @@ $(document).ready(function () {
     // POPUP
     $(".popup-trigger").click(function (e) {
         e.preventDefault();
-
+        $('body').css('overflow', 'hidden !important');
         $("#popup-wrapper").addClass("active_popup");
     });
 
     $("#popup-wrapper, #close-popup").click(function (e) {
         $("#popup-wrapper").removeClass("active_popup");
+        $('body').css('overflow', 'unset');
     });
 
     $(".modal").click(function (e) {
