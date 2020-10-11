@@ -19,7 +19,7 @@ $(document).ready(function () {
             scrollSpeed: 1100,
             offset: 0,
             touchScroll:true,
-
+            standardScrollElements: ".footer",
              before: function (currIndex, sections) {
                 sections.forEach(function (section) {
                     section.removeClass('section_active')

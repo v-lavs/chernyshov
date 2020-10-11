@@ -67,7 +67,9 @@
       justify-content: center;
     }
   }
-
+  @include respond-to($xs) {
+    height: 346px;
+  }
   @include respond-to($xxs) {
     padding-left: 30px;
     padding-right: 30px;
