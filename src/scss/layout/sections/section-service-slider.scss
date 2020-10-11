@@ -3,11 +3,18 @@
   padding-top: 100px;
   padding-bottom: 90px;
 
+  .service-slider__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .section {
     padding-top: 0;
     padding-bottom: 0;
   }
-
+  .section__header{
+    width: 100%;
+  }
   .service-slider {
     overflow: hidden;
   }
@@ -27,7 +34,7 @@
   .slider__sidebar {
     padding: 0 2.333em;
     line-height: 1.2;
-    //padding-top: 168px;
+
     .heading {
       margin-bottom: 1.5em;
     }
@@ -146,6 +153,8 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 40px;
+
+      width: 100%;
     }
 
     .block-nav {
@@ -168,11 +177,11 @@
     }
 
     .swiper-button-prev {
-      margin-right: 14px;
+      margin-right: 10px;
     }
 
     .swiper-button-next {
-      margin-left: 14px;
+      margin-left: 10px;
     }
   }
 }

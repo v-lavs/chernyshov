@@ -18,7 +18,7 @@ $(document).ready(function () {
         section: ".content__slide, .footer",
         scrollSpeed: 900,
         offset: 0,
-        // scrollbars: false,
+        scrollbars: false,
         touchScroll: true,
         standardScrollElements: ".footer",
         before: function (currIndex, sections) {
