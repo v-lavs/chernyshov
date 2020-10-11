@@ -4,8 +4,6 @@
   max-width: 1206px;
   min-width: 280px;
   margin: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 
   &__header {
     padding: 0 20px 22px;
@@ -17,6 +15,7 @@
   &__body {
     background-color: $bg-light-100;
     padding: 24px 58px 38px;
+    overflow: auto;
   }
 
   .part-left,
