@@ -16,8 +16,9 @@
     background-color: $bg-light-100;
     padding: 24px 58px 38px;
     overflow: auto;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    //overflow-y: scroll;
+    //-webkit-overflow-scrolling: touch;
+    overflow: auto;
     height: 100%;
   }
 
