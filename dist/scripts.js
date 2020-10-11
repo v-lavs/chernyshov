@@ -20943,22 +20943,32 @@ if touchScroll is false - update index
     return scrollify;
 }));
 
-
 $(document).ready(function () {
     $('.nav-services li').each(function (i, item) {
         $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
     });
 
-    $.scrollify({
-        section: ".content__slide",
-        scrollSpeed: 900,
-        before: function (currIndex, sections) {
-            sections.forEach(function (section) {
-                section.removeClass('section_active')
-            });
-            sections[currIndex].addClass('section_active');
-        }
-    });
+
+    //SCROLLIfY
+    // if ($(window).width() > 1080 && $('body').hasClass('home')) {
+        $.scrollify({
+            section: ".content__slide, .footer",
+            scrollSpeed: 1100,
+            offset: 0,
+            touchScroll:true,
+
+             before: function (currIndex, sections) {
+                sections.forEach(function (section) {
+                    section.removeClass('section_active')
+                });
+                sections[currIndex].addClass('section_active');
+            }
+        });
+    // }
+
+
+
+
 
     //SIDEBAR OPEN
     var sidebar = $('.sidebar');
@@ -20985,9 +20995,9 @@ $(document).ready(function () {
 
     $('.nav-services a').click(function (e) {
         e.preventDefault();
-        const index = $(e.target).parent().data('slide') ;
+        const index = $(e.target).parent().data('slide');
 
-        if($('.service-slider').length > 0) {
+        if ($('.service-slider').length > 0) {
             $('html, body').animate({
                 scrollTop: $('.service-slider').offset().top
             }, 750);
@@ -20998,13 +21008,12 @@ $(document).ready(function () {
     // POPUP
     $(".popup-trigger").click(function (e) {
         e.preventDefault();
-        $('body').css('overflow', 'hidden !important');
+
         $("#popup-wrapper").addClass("active_popup");
     });
 
     $("#popup-wrapper, #close-popup").click(function (e) {
         $("#popup-wrapper").removeClass("active_popup");
-        $('body').css('overflow', 'unset');
     });
 
     $(".modal").click(function (e) {
