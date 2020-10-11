@@ -20975,13 +20975,14 @@ $(document).ready(function () {
         sidebar.addClass('open-sidebar');
         $.scrollify.disable();
         $('body, html').addClass('no-scroll');
-        $.scrollify.enable();
+
     });
 
     $('.close').click(function (e) {
         e.preventDefault();
         sidebar.removeClass('open-sidebar');
         $('body, html').removeClass('no-scroll');
+        $.scrollify.enable();
     });
 
     //SLIDER
@@ -21009,12 +21010,10 @@ $(document).ready(function () {
         e.preventDefault();
         $("#popup-wrapper").addClass("active_popup");
         $.scrollify.disable();
-        $('body, html').addClass('no-scroll');
     });
 
     $("#popup-wrapper, #close-popup").click(function (e) {
         $("#popup-wrapper").removeClass("active_popup");
-        $('body, html').removeClass('no-scroll');
         $.scrollify.enable();
     });
 
