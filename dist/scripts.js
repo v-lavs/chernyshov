@@ -20953,9 +20953,9 @@ $(document).ready(function () {
     //SCROLLIfY
     $.scrollify({
         section: ".content__slide, .footer",
-        scrollSpeed: 900,
+        scrollSpeed: 1000,
         offset: 0,
-        scrollbars: false,
+        // scrollbars: false,
         touchScroll: true,
         standardScrollElements: ".footer",
         before: function (currIndex, sections) {
