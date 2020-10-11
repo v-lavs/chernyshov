@@ -20943,27 +20943,10 @@ if touchScroll is false - update index
     return scrollify;
 }));
 
-$(document).ready(function () {
+$(window).on('load', function () {
 
     $('.nav-services li').each(function (i, item) {
         $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
-    });
-
-
-    //SCROLLIfY
-    $.scrollify({
-        section: ".content__slide, .footer",
-        scrollSpeed: 1000,
-        offset: 0,
-        // scrollbars: false,
-        touchScroll: true,
-        standardScrollElements: ".footer",
-        before: function (currIndex, sections) {
-            sections.forEach(function (section) {
-                section.removeClass('section_active')
-            });
-            sections[currIndex].addClass('section_active');
-        }
     });
 
 
@@ -20983,6 +20966,7 @@ $(document).ready(function () {
     });
 
     //SLIDER
+
     let swiper = new Swiper('.service-slider', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -21028,3 +21012,20 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    //SCROLLIfY
+    $.scrollify({
+        section: ".content__slide, .footer",
+        scrollSpeed: 1000,
+        offset: 0,
+        // scrollbars: false,
+        touchScroll: true,
+        standardScrollElements: ".footer",
+        before: function (currIndex, sections) {
+            sections.forEach(function (section) {
+                section.removeClass('section_active')
+            });
+            sections[currIndex].addClass('section_active');
+        }
+    });
+})
