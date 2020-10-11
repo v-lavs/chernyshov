@@ -2,6 +2,7 @@
   position: relative;
   min-height: 940px;
 
+
   .section__header {
     position: static;
   }
@@ -25,6 +26,7 @@
 
   @media screen and (max-width: 1920px) {
     min-height: 50vw;
+    //min-height: 100vh;
   }
 
   .section__title {
@@ -83,7 +85,11 @@
       height: 75vh;
     }
     .nav-services{
-      padding-top: 0;
+      padding-top: 80px;
+      width: 100%;
+    }
+    .section__title{
+      margin-bottom: 20px;
     }
   }
 }

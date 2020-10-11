@@ -7,13 +7,14 @@
     font-size: 24px;
 
 
-
     li {
       margin-bottom: 31px;
+
       &:first-child {
         position: relative;
         padding-left: 54px;
       }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -139,11 +140,12 @@
       display: block;
     }
   }
-  .link_primary.link_primary-mob{
+
+  .link_primary.link_primary-mob {
     display: inline-block;
   }
 
-   @include respond-to($md) {
+  @include respond-to($md) {
     padding-top: 90px;
 
     .problems__item {
@@ -159,12 +161,13 @@
     padding-top: 0;
     .section__bg {
       background-position: center bottom;
-     height: 90vh;
+      height: 90vh;
 
     }
     .section__header {
       padding-top: 42px;
       height: 90vh;
+
       .section__title {
         width: 80%;
       }
@@ -225,10 +228,12 @@
     .contacts_mob {
       padding-top: 70px;
       text-align: center;
+
       li:first-child {
 
         padding-left: 0;
       }
+
       .link_phone {
         padding-left: 0;
         padding-top: 36px;
@@ -241,11 +246,24 @@
       }
     }
   }
-  @media all and (max-width: 400px){
-    .link_primary.link_primary-mob{
+  @media all and (max-width: 400px) {
+    .section__sub-title {
+      font-size: 20px;
+    }
+    .text_md p {
+      margin-bottom: 1.4em;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .contacts_mob .link_phone{
+      padding-top: 26px;
+    }
+    .link_primary.link_primary-mob {
       font-size: 18px;
       padding-left: 40px;
       padding-right: 40px;
+      width: 100%;
     }
   }
 }
