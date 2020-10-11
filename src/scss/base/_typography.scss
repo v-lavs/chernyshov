@@ -59,12 +59,17 @@
       font-size: 40px;
     }
   }
+  @include respond-to($xs) {
+    &_xs{
+      font-size: 20px;
+    }
+  }
   @include respond-to($xxs) {
     &_xl {
       font-size: 40px;
     }
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 380px) {
     &_xl {
       font-size: 30px;
     }
@@ -124,4 +129,5 @@
       font-size: 16px;
     }
   }
+
 }

@@ -225,12 +225,23 @@
     .person-info_mob {
       margin-bottom: 50px;
     }
+    .section__sub-title {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    .text_md p {
+      margin-bottom: 1.4em;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
     .contacts_mob {
       padding-top: 70px;
       text-align: center;
 
       li:first-child {
-
+        margin-bottom: 20px;
         padding-left: 0;
       }
 
@@ -245,17 +256,16 @@
         }
       }
     }
+    .link_primary.link_primary-mob{
+      font-size: 24px;
+      width: 100%;
+    }
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 380px) {
     .section__sub-title {
       font-size: 20px;
     }
-    .text_md p {
-      margin-bottom: 1.4em;
-      &:last-child{
-        margin-bottom: 0;
-      }
-    }
+
     .contacts_mob .link_phone{
       padding-top: 26px;
     }

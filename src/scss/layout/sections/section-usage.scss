@@ -79,7 +79,7 @@
       height: auto;
       padding-bottom: 10px;
 
-      .btn {
+      .btn-wrap {
         display: none;
       }
     }
@@ -104,7 +104,7 @@
   }
 
 
-  @media all and (max-width: 400px){
+  @media all and (max-width: 380px){
     .btn_primary.btn_primary-mob {
       font-size: 18px;
       padding-left: 40px;
