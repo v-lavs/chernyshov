@@ -68,7 +68,7 @@
     }
   }
   @include respond-to($xs) {
-    height: 346px;
+    height: 346px!important;
   }
   @include respond-to($xxs) {
     padding-left: 30px;
