@@ -3,7 +3,8 @@
   padding: 90px 10rem 90px 8.25rem;
   background-color: $bg-dark;
   color: $color-light;
-  height: 300px!important;
+  height: 300px !important;
+
   .heading_lg {
     line-height: 1;
     height: 1em;
@@ -66,13 +67,16 @@
       justify-content: center;
     }
   }
-  @include respond-to($xs) {
-    height: 376px!important;
+
+  @include respond-to($sm) {
+    height: 376px !important;
   }
+
   @include respond-to($xxs) {
     padding-left: 30px;
     padding-right: 30px;
   }
+
   @media all and (max-width: 400px) {
     .link_primary.link_primary-mob {
       font-size: 18px;
