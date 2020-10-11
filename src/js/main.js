@@ -15,12 +15,12 @@ $(document).ready(function () {
 
     //SCROLLIfY
     $.scrollify({
-        section: ".content__slide",
+        section: ".content__slide, .footer",
         scrollSpeed: 900,
         offset: 0,
         // scrollbars: false,
         touchScroll: true,
-        // standardScrollElements: ".footer",
+        standardScrollElements: ".footer",
         before: function (currIndex, sections) {
             sections.forEach(function (section) {
                 section.removeClass('section_active')
