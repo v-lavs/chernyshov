@@ -20956,7 +20956,7 @@ $(document).ready(function () {
         scrollSpeed: 1100,
         offset: 0,
         scrollbars: false,
-        touchScroll: true,
+        // touchScroll: true,
         standardScrollElements: ".footer",
         before: function (currIndex, sections) {
             sections.forEach(function (section) {
@@ -20974,14 +20974,11 @@ $(document).ready(function () {
         e.preventDefault();
         sidebar.addClass('open-sidebar');
         $.scrollify.disable();
-        $('body, html').addClass('no-scroll');
-
     });
 
     $('.close').click(function (e) {
         e.preventDefault();
         sidebar.removeClass('open-sidebar');
-        $('body, html').removeClass('no-scroll');
         $.scrollify.enable();
     });
 
