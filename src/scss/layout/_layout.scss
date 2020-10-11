@@ -1,10 +1,16 @@
 html,
 body{
   &.no-scroll{
+    //height: 100%;
+    //overflow: hidden!important;
     height: 100%;
     overflow: hidden!important;
+    width: 100%;
+    position: fixed;
   }
 }
+
+
 
 .wrap {
   display: block;
@@ -29,7 +35,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  z-index: 10;
+  z-index: 140;
   transition: .35s;
 
 
@@ -213,7 +219,7 @@ body{
     padding-top: 46px;
     transform: translateX(-100%);
     transition: .35s;
-    z-index: 140;
+
 
     &.open-sidebar {
       transform: translateX(0);

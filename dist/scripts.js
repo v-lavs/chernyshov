@@ -20944,25 +20944,27 @@ if touchScroll is false - update index
 }));
 
 $(document).ready(function () {
+
     $('.nav-services li').each(function (i, item) {
         $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
     });
 
 
     //SCROLLIfY
-        $.scrollify({
-            section: ".content__slide, .footer",
-            scrollSpeed: 1100,
-            offset: 0,
-            touchScroll:true,
-            standardScrollElements: ".footer",
-             before: function (currIndex, sections) {
-                sections.forEach(function (section) {
-                    section.removeClass('section_active')
-                });
-                sections[currIndex].addClass('section_active');
-            }
-        });
+    $.scrollify({
+        section: ".content__slide, .footer",
+        scrollSpeed: 1100,
+        offset: 0,
+        scrollbars: false,
+        touchScroll: true,
+        standardScrollElements: ".footer",
+        before: function (currIndex, sections) {
+            sections.forEach(function (section) {
+                section.removeClass('section_active')
+            });
+            sections[currIndex].addClass('section_active');
+        }
+    });
 
 
     //SIDEBAR OPEN
@@ -20971,7 +20973,9 @@ $(document).ready(function () {
     $('.btn-burger').click(function (e) {
         e.preventDefault();
         sidebar.addClass('open-sidebar');
+        $.scrollify.disable();
         $('body, html').addClass('no-scroll');
+        $.scrollify.enable();
     });
 
     $('.close').click(function (e) {
@@ -21004,12 +21008,14 @@ $(document).ready(function () {
     $(".popup-trigger").click(function (e) {
         e.preventDefault();
         $("#popup-wrapper").addClass("active_popup");
+        $.scrollify.disable();
         $('body, html').addClass('no-scroll');
     });
 
     $("#popup-wrapper, #close-popup").click(function (e) {
         $("#popup-wrapper").removeClass("active_popup");
         $('body, html').removeClass('no-scroll');
+        $.scrollify.enable();
     });
 
     $(".modal").click(function (e) {
