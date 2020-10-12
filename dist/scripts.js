@@ -21028,6 +21028,12 @@ $(document).ready(function () {
     });
 
     if ($(window.innerWidth <= 1080)) {
-        scroll.disable();
+        if (!$.scrollify.isDisabled()) {
+            scroll.disable();
+        }
+    } else {
+        if ($.scrollify.isDisabled()) {
+            scroll.enable();
+        }
     }
 });

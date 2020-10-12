@@ -11,16 +11,29 @@
   .section {
     padding-top: 0;
     padding-bottom: 0;
-    &__header{
+
+    &__header {
       width: 100%;
     }
-    &__title{
+
+    &__title {
       margin-bottom: .74em;
     }
   }
 
   .service-slider {
     overflow: hidden;
+    @include respond-to($md) {
+
+      &__content {
+        width: 100%;
+      }
+
+      .col-8 {
+        width: 100%;
+      }
+
+    }
   }
 
   .section__content {
@@ -38,6 +51,14 @@
   .slider__sidebar {
     padding: 0 2.333em;
     line-height: 1.2;
+    @include respond-to($lg) {
+      padding: 0;
+    }
+    @include respond-to($md) {
+      padding-top: 30px;
+      width: 100%;
+
+    }
 
     .heading {
       margin-bottom: 1.5em;
@@ -72,6 +93,11 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    @include respond-to($sm) {
+      height: auto;
+      align-items: center;
+      max-width: initial;
+    }
 
     &_prev {
       order: -1;
@@ -83,6 +109,21 @@
       padding-bottom: 1em;
       font-size: 14px;
       line-height: 1.25;
+      //overflow-wrap: break-word;
+      word-wrap: break-word;
+      @include respond-to($screen-md) {
+        width: 80px;
+      }
+      @include respond-to($lg) {
+        width: 100px;
+      }
+      @include respond-to($sm) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      @media all and (max-width: 380px){
+        width: 75px;
+      }
     }
   }
 
@@ -119,30 +160,6 @@
 }
 
 
-@include respond-to($lg) {
-  .service-slider {
-    .slider__sidebar {
-      padding: 0;
-    }
-  }
-}
-
-@include respond-to($md) {
-  .service-slider {
-    .slider__sidebar,
-    &__content {
-      width: 100%;
-    }
-
-    .slider__sidebar {
-      padding-top: 30px;
-    }
-    .col-8{
-      width: 100%;
-    }
-  }
-}
-
 @include respond-to($sm) {
   .section-service-slider {
     padding-top: 50px;
@@ -164,27 +181,22 @@
       width: 100%;
     }
 
-    .block-nav {
-      height: auto;
-      align-items: center;
-
-      &__name {
-        padding-bottom: 0;
-      }
-    }
-
     .block-nav_next {
       flex-direction: row;
       text-align: right;
+
     }
 
     .block-nav_prev {
-      flex-direction: row-reverse;
+      flex-direction: row;
+      align-items: center;
       text-align: left;
+      justify-content: flex-start;
     }
 
     .swiper-button-prev {
       margin-right: 10px;
+      order: -1;
     }
 
     .swiper-button-next {
