@@ -79,7 +79,7 @@ $(document).ready(function () {
     //SCROLLIfY
     $.scrollify({
         section: ".content__slide",
-        scrollSpeed: 1000,
+        scrollSpeed: 900,
         offset: 0,
         // scrollbars: false,
         touchScroll: true,
