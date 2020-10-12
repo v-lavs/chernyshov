@@ -43,15 +43,17 @@
   }
 
   @include respond-to($xs) {
+    background-color: #e9e6dd;
     padding-top: 0;
     .section__bg-image {
-      top: 40px;
+      top: 0;
+      background-color: #f0efe9;
       background-position: right 0;
       width: 100%;
       height: 70vh;
     }
     .section__header {
-      height: 75vh;
+      height: 70vh;
       display: flex;
       align-items: flex-end;
     }
