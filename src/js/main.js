@@ -84,7 +84,7 @@ $(document).ready(function () {
         // scrollbars: false,
         touchScroll: true,
         interstitialSection: ".footer",
-        before: function (currIndex, sections) {
+        after: function (currIndex, sections) {
             sections.forEach(function (section) {
                 section.removeClass('section_active')
             });
