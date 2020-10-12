@@ -21013,12 +21013,11 @@ $(document).ready(function () {
     });
 
     //SCROLLIfY
-    $.scrollify({
+    const scroll = $.scrollify({
         section: ".content__slide",
         scrollSpeed: 1000,
         offset: 0,
-        // scrollbars: false,
-        touchScroll: true,
+        touchScroll: false,
         interstitialSection: ".footer",
         before: function (currIndex, sections) {
             sections.forEach(function (section) {
@@ -21027,4 +21026,8 @@ $(document).ready(function () {
             sections[currIndex].addClass('section_active');
         }
     });
+
+    if ($(window.innerWidth <= 1080)) {
+        scroll.disable();
+    }
 });

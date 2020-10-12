@@ -53,6 +53,15 @@ a:hover                        { text-decoration:none; }
   opacity: 0;
 }
 
+@include respond-to($sm){
+  .section {
+    .animated-element {
+      animation: none;
+      opacity: 1;
+    }
+  }
+}
+
 @keyframes slide-right {
   from {
     opacity: 0;
@@ -76,4 +85,5 @@ a:hover                        { text-decoration:none; }
     transform: translate3d(0, 0, 0);
   }
 }
+
 
