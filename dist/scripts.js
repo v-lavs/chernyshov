@@ -21015,7 +21015,7 @@ $(window).on('load', function () {
 $(document).ready(function () {
     //SCROLLIfY
     $.scrollify({
-        section: ".content__slide, .footer",
+        section: ".content__slide",
         scrollSpeed: 1000,
         offset: 0,
         // scrollbars: false,
