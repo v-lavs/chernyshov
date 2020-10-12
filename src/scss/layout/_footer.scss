@@ -3,7 +3,6 @@
   padding: 90px 10rem 80px 8.25rem;
   background-color: $bg-dark;
   color: $color-light;
-  height: 300px !important;
 
   .heading_lg {
     line-height: 1;
@@ -50,7 +49,6 @@
   }
 
   @include respond-to($md) {
-    height: 376px !important;
     padding-top: 55px;
     padding-bottom: 55px;
     .col-6 {

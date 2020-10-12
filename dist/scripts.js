@@ -21020,7 +21020,7 @@ $(document).ready(function () {
         offset: 0,
         // scrollbars: false,
         touchScroll: true,
-        standardScrollElements: ".footer",
+        interstitialSection: ".footer",
         before: function (currIndex, sections) {
             sections.forEach(function (section) {
                 section.removeClass('section_active')
