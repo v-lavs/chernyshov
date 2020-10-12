@@ -21021,7 +21021,7 @@ $(document).ready(function () {
         // scrollbars: false,
         touchScroll: true,
         interstitialSection: ".footer",
-        after: function (currIndex, sections) {
+        before: function (currIndex, sections) {
             sections.forEach(function (section) {
                 section.removeClass('section_active')
             });
