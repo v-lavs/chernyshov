@@ -71,13 +71,13 @@
   &_primary {
     position: relative;
     color: $color-primary;
-    border-bottom: 2px dashed $color-primary;
+    border-bottom: 1px dashed $color-primary;
   }
 
   &_border-grey {
     display: inline;
     line-height: 1.2;
-    border-bottom: 2px dashed $bg-light-500;
+    border-bottom: 1px dashed $bg-light-500;
   }
 }
 

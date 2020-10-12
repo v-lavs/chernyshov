@@ -26,7 +26,6 @@
 
   @media screen and (max-width: 1920px) {
     min-height: 50vw;
-    //min-height: 100vh;
   }
 
   .section__title {
@@ -35,7 +34,7 @@
   }
 
   .nav-services li {
-    margin-bottom: 1em;
+    margin-bottom: .55em;
 
     &:last-child {
       margin-bottom: 0;

@@ -6,7 +6,7 @@
 //= include ./swiper-bundle.esm.browser.min.js ;
 //= include ./scrollify.js ;
 
-$(window).on('load', function () {
+$(document).ready(function () {
 
     $('.nav-services li').each(function (i, item) {
         $(item).css({animationDelay: (i + 1) * 100 + 200 + 'ms'})
@@ -14,7 +14,7 @@ $(window).on('load', function () {
 
 
     //SIDEBAR OPEN
-    var sidebar = $('.sidebar');
+    let sidebar = $('.sidebar');
 
     $('.btn-burger').click(function (e) {
         e.preventDefault();
@@ -31,6 +31,7 @@ $(window).on('load', function () {
     //SLIDER
 
     let swiper = new Swiper('.service-slider', {
+        autoHeight: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -56,7 +57,7 @@ $(window).on('load', function () {
         $.scrollify.disable();
     });
 
-    $("#popup-wrapper, #close-popup").click(function (e) {
+    $("#popup-wrapper, #close-popup").click(function () {
         $("#popup-wrapper").removeClass("active_popup");
         $.scrollify.enable();
     });
@@ -73,9 +74,7 @@ $(window).on('load', function () {
             $(this).removeClass('has_value');
         }
     });
-});
 
-$(document).ready(function () {
     //SCROLLIfY
     $.scrollify({
         section: ".content__slide",
@@ -91,4 +90,4 @@ $(document).ready(function () {
             sections[currIndex].addClass('section_active');
         }
     });
-})
+});

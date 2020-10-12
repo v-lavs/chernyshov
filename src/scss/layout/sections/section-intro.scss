@@ -1,5 +1,6 @@
 .section-intro {
-  padding-top: 150px;
+
+  padding-top: 136px;
   min-height: 75.5vw;
 
   .contacts_mob {
@@ -59,7 +60,7 @@
   }
 
   .text_lg {
-    max-width: 790px;
+    width: 75%;
     line-height: 1.33;
     margin-bottom: 2.1em;
   }
@@ -111,6 +112,7 @@
     padding: 20px 45px 18px 76px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, .5);
+    margin-left: 32px;
 
     &__item {
       margin-bottom: .875em;
@@ -145,6 +147,11 @@
     display: inline-block;
   }
 
+  @include respond-to($lg) {
+    .problems__item .certificate {
+      margin-left: 0;
+    }
+  }
   @include respond-to($md) {
     padding-top: 90px;
 
@@ -172,11 +179,8 @@
         width: 80%;
       }
     }
-    .section__sub-title {
-      font-weight: 600;
-    }
 
-    .section__sub-title,
+    //.section__sub-title,
     .person-info_mob {
       display: block !important;
       text-align: center;
@@ -195,7 +199,12 @@
         padding-bottom: 18px;
       }
     }
+    .section__sub-title {
 
+      font-weight: 600;
+      text-align: center;
+      margin: 0 auto 25px;
+    }
     .certificate.certificate_desktop {
       display: none;
     }
@@ -228,11 +237,12 @@
     .section__sub-title {
       font-weight: 700;
       font-size: 20px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
     .text_md p {
       margin-bottom: 1.4em;
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
@@ -256,7 +266,7 @@
         }
       }
     }
-    .link_primary.link_primary-mob{
+    .link_primary.link_primary-mob {
       font-size: 24px;
       width: 100%;
     }
@@ -266,7 +276,7 @@
       font-size: 20px;
     }
 
-    .contacts_mob .link_phone{
+    .contacts_mob .link_phone {
       padding-top: 26px;
     }
     .link_primary.link_primary-mob {

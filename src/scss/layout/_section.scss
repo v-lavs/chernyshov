@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 90px 10rem 90px 8.25rem;
+  padding: 90px 8.25rem;
 
   & > * {
     position: relative;
@@ -10,8 +10,8 @@
   }
 
   &__title {
-    line-height: 1.12;
-    margin-bottom: 1em;
+    line-height: 1;
+    margin-bottom: 1.05em;
     font-weight: 700;
   }
 }
@@ -25,6 +25,9 @@
 @media all and (max-width: 620px) {
   .section{
     padding: 42px 5rem 60px;
+    &__title{
+      line-height: 1.12;
+    }
   }
 }
 

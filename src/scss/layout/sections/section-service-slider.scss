@@ -1,6 +1,6 @@
 .section-service-slider {
   position: relative;
-  padding-top: 100px;
+  padding-top: 82px;
   padding-bottom: 90px;
 
   .service-slider__content {
@@ -11,10 +11,14 @@
   .section {
     padding-top: 0;
     padding-bottom: 0;
+    &__header{
+      width: 100%;
+    }
+    &__title{
+      margin-bottom: .74em;
+    }
   }
-  .section__header{
-    width: 100%;
-  }
+
   .service-slider {
     overflow: hidden;
   }
@@ -44,7 +48,7 @@
     background-color: transparent;
     left: 0;
     right: 0;
-    top: 95px;
+    top: 85px;
 
     display: flex;
     justify-content: space-between;
@@ -192,6 +196,7 @@
 @include respond-to($xs) {
   .section-service-slider {
     padding-top: 40px;
+    padding-bottom: 30px;
   }
   .block-nav {
     max-width: 44%;
