@@ -787,6 +787,10 @@ a:hover {
   padding-bottom: 90px;
 }
 
+.section-service-slider .col-8 {
+  flex-grow: 1;
+}
+
 .section-service-slider .service-slider__content {
   display: flex;
   flex-wrap: wrap;

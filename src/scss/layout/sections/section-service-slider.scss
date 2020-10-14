@@ -3,6 +3,10 @@
   padding-top: 82px;
   padding-bottom: 90px;
 
+  .col-8 {
+    flex-grow: 1;
+  }
+
   .service-slider__content {
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +129,7 @@
         padding-bottom: 0;
         margin-bottom: 0;
       }
-      @media all and (max-width: 380px){
+      @media all and (max-width: 380px) {
         width: 75px;
       }
     }
