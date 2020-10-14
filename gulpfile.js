@@ -1,66 +1,99 @@
+'use strict';
+
 var gulp = require('gulp'),
-    sourcemaps = require('gulp-sourcemaps'),
-    plumber = require('gulp-plumber'),
-    autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    include = require('gulp-include'),
-    sass = require('gulp-sass'),
-    gulpif = require('gulp-if'),
-    util = require('gulp-util');
+  watch = require('gulp-watch'),
+  prefixer = require('gulp-autoprefixer'),
+  uglify = require('gulp-uglify'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  cssmin = require('gulp-minify-css'),
+  include = require('gulp-include'),
+  gcmq = require('gulp-group-css-media-queries'),
+  rimraf = require('rimraf');
 
-var config = {
-    sourceMaps: !util.env.production,
-    sassOptions: {
-        errLogToConsole: true,
-        precision: 4,
-        noCache: true,
-        outputStyle: 'compressed'
-    }
+var path = {
+  build: {
+    js: './dist/',
+    css: './dist/'
+  },
+  src: {
+    js: './src/js/main.js',
+    style: './src/scss/main.scss'
+  },
+  watch: {
+    js: './src/js/**/*.js',
+    style: './src/style/**/*.scss'
+  },
+  clean: './dist'
 };
 
-// Default error handler
-var onError = function (err) {
-    console.log('An error occured:', err.message);
-    this.emit('end');
-};
-
-// Concatenates all files that it finds in the main.js
-gulp.task('scripts', function () {
-    return gulp.src('./src/js/main.js')
-        .pipe(include())
-        .pipe(rename({basename: 'scripts'}))
-        .pipe(gulp.dest('./dist'));
+gulp.task('clean', function (cb) {
+  rimraf(path.clean, cb);
 });
 
-gulp.task('scripts-min', function () {
-    return gulp.src('./src/js/main.js')
-        .pipe(include())
-        .pipe(rename({basename: 'scripts'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist'))
+gulp.task('js:dev', function () {
+  gulp.src(path.src.js)
+  .pipe(sourcemaps.init())
+    .pipe(include({
+      extensions: "js",
+      hardFail: true
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.build.js));
 });
 
 
-
-gulp.task('sass', function () {
-    return gulp.src('./src/scss/main.scss')
-        .pipe(plumber({errorHandler: onError}))
-        .pipe(gulpif(config.sourceMaps, sourcemaps.init()))
-        .pipe(sass(config.sassOptions))
-        .pipe(gulpif(config.sourceMaps, sourcemaps.write()))
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('./dist'))
-        .pipe(notify({title: 'Styles', message: 'update successfully'}));
+gulp.task('js:build', function () {
+  gulp.src(path.src.js)
+    .pipe(include({
+      extensions: "js",
+      hardFail: true
+    }))
+    .pipe(gulp.dest(path.build.js));
 });
 
-// watch files for change
-gulp.task('watch', ['sass', 'scripts'], function () {
-    gulp.watch(['./src/js/**/*.js'], ['scripts']);
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
+gulp.task('style:dev', function () {
+  gulp.src(path.src.style)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      sourceMap: true,
+      errLogToConsole: true
+    }))
+    .pipe(gcmq())
+    .pipe(gulp.dest(path.build.css));
 });
 
-gulp.task('default', ['sass', 'scripts-min'], function () {
+gulp.task('style:build', function () {
+  gulp.src(path.src.style)
+    .pipe(sass({
+      sourceMap: false,
+      errLogToConsole: true
+    }))
+    .pipe(prefixer())
+    .pipe(gcmq())
+    .pipe(cssmin())
+    .pipe(gulp.dest(path.build.css));
 });
+
+gulp.task('build', [
+  'js:build',
+  'style:build'
+]);
+
+gulp.task('dev', [
+  'js:dev',
+  'style:dev'
+]);
+
+gulp.task('watch:styles', ['style:dev'], function () {
+  gulp.watch(path.watch.style, ['style:dev']);
+});
+
+gulp.task('watch:js', ['js:dev'], function () {
+  gulp.watch(path.watch.js, ['js:dev']);
+});
+
+gulp.task('watch',['watch:styles', 'watch:js'], function(){
+});
+
+gulp.task('default', ['build', 'watch']);
