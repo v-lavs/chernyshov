@@ -44,6 +44,12 @@
     display: inline;
     color: $color-primary;
     border-bottom: 1px solid $color-primary;
+    transition: .35s;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
   }
 
   .form {

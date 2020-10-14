@@ -30,6 +30,7 @@
   &:hover,
   &:focus{
     background-color: darken($color-primary, 7.5%);
+
   }
   &_primary{
     background-color: $color-primary;

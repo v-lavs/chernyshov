@@ -64,6 +64,10 @@
       transform: translateX(-100%);
       width: 34px;
       height: 33px;
+
+      .path {
+        fill: $color-primary;
+      }
     }
   }
 

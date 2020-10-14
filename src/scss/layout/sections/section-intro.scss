@@ -29,6 +29,9 @@
         width: 34px;
         height: 33px;
       }
+      .path {
+        fill: $color-primary;
+      }
     }
   }
 
@@ -273,6 +276,7 @@
   }
   @media all and (max-width: 380px) {
     .section__sub-title {
+      width: 90%;
       font-size: 20px;
     }
 
