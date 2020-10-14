@@ -21003,14 +21003,12 @@ $(document).ready(function () {
 
     function getArrowTitles() {
         const slides = $('.service-slider .swiper-slide');
-        const prevSlide = slides.get(swiper.previousIndex);
+        const prevSlide = slides.get(swiper.activeIndex - 1);
         const nextSlide = slides.get(swiper.activeIndex + 1);
 
         $('.sticky-prev-name').html(swiper.activeIndex > 0 ? $(prevSlide).find('.section__title').text() : '');
         $('.sticky-next-name').html($(nextSlide).find('.section__title').text() || '');
 
-        $('.sticky-prev-name').html(swiper.activeIndex > 0 ? $(prevSlide).find('.section__title').text() : '');
-        $('.sticky-next-name').html($(nextSlide).find('.section__title').text() || '');
     }
 
     getArrowTitles();
