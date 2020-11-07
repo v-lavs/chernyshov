@@ -76,9 +76,6 @@
     }
   }
 
-  @include respond-to($sm) {
-
-  }
 
   @include respond-to($xxs) {
     padding-left: 30px;
